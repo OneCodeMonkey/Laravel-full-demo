@@ -1,6 +1,6 @@
 #! /bin/sh
 # 打印输出
-echo '======上传代码到服务器======'
+sudo echo '======上传代码到服务器======'
 # 进入目录
 cd ~/Code/Laravel-full-demo
 # 
@@ -11,5 +11,5 @@ git pull origin master
 # npm run build
 # 自动更新 composer,如需要可以打开
 # composer update
-echo $(date) >> hook.log
-echo "======代码更新完成======"
+sudo echo $(date) >> hook.log
+sudo echo "======代码更新完成======"
