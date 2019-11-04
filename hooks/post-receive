@@ -1,0 +1,15 @@
+#! /bin/sh
+# 打印输出
+echo '======上传代码到服务器======'
+# 进入目录
+cd ~/Code/Laravel-full-demo
+# 
+unset GIT_DIR
+
+git pull origin master
+# 自动编译前端 vue项目,如需要可以打开
+# npm run build
+# 自动更新 composer,如需要可以打开
+# composer update
+echo $(date) >> hook.log
+echo "======代码更新完成======"
