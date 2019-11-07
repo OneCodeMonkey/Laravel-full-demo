@@ -18,10 +18,4 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
-
-    public function testNumericTest()
-    {
-        assertFalse(1 == 2);
-        assert(10 == 2 * 5);
-    }
 }
