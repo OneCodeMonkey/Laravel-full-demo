@@ -4,7 +4,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'php --version'
-                sh 'ls -lah'
+                sh 'composer up -vvv'
+                sh 'php artisan key:generate'
                 sh '$WORKSPACE/vendor/bin/phpunit tests/Feature/OtherBasicTest.php'
             }
         }
