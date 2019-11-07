@@ -12,7 +12,7 @@ class OtherBasicTest extends TestCase
      */
     public function testNumericTest()
     {
-        assert(1 == 2);
-        assert(10 == 2 * 5);
+        $this->assertFalse(1 == 2);
+        $this->assertTrue(10 == 2 * 5);
     }
 }
