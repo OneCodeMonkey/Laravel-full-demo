@@ -3,7 +3,7 @@
 
 namespace Tests\Feature;
 
-use Test\TestCase;
+use Tests\TestCase;
 
 class OtherBasicTest extends TestCase
 {
