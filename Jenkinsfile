@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'php --version'
+                sh 'composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/'
                 sh 'composer install --optimize-autoloader --no-dev'
                 sh 'cp .env.example .env'
                 sh 'php artisan key:generate'
