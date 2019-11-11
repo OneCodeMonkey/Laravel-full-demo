@@ -10,7 +10,7 @@ pipeline {
                 sh "php -r \"unlink('composer-setup.php');\""
                 sh 'composer install --optimize-autoloader --no-dev'
                 sh 'php artisan key:generate'
-                sh '$WORKSPACE/vendor/bin/phpunit tests/Feature/OtherBasicTest.php'
+                sh '$WORKSPACE/vendor/bin/phpunit tests/'
             }
         }
     }
