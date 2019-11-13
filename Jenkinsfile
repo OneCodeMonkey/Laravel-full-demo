@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh 'php --version'
                 sh 'composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/'
-                sh 'composer install'
+                sh 'composer install --no-interaction --prefer-dist'
                 sh 'cp .env.example .env'
                 sh 'ls -lah'
                 sh 'php artisan key:generate'
