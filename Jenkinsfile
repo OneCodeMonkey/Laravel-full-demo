@@ -9,7 +9,9 @@ pipeline {
                 sh 'cp .env.example .env'
                 sh 'ls -lah'
                 sh 'php artisan key:generate'
-                sh '$WORKSPACE/vendor/bin/phpunit tests/Feature/OtherBasicTest.php'
+                sh '$WORKSPACE/vendor/bin/phpcs --standard=PSR2 -v app/'
+                sh '$WORKSPACE/vendor/bin/phpstan analyse app/'
+                sh '$WORKSPACE/vendor/bin/phpunit tests/'
             }
         }
     }
