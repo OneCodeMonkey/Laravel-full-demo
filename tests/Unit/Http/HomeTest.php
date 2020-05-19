@@ -11,7 +11,5 @@ class HomeTest extends TestCase
         $response = $this->get('/');
 
         $response->assertStatus(200);
-
-        print("home page can't access.");
     }
 }
