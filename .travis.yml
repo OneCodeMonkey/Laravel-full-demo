@@ -40,6 +40,12 @@ install:
 script:
   - cp .env.example .env
   - php artisan key:generate
+  - echo " ============================================================ ";echo ">>> checking code formats start...";
   - vendor/bin/phpcs --standard=PSR2 -q app/
+  - echo ">>> checking code formats finished.";echo " ============================================================ ";echo
+  - echo " ============================================================ ";echo ">>> static debugging start...";
   - vendor/bin/phpstan analyse -l 0 -c phpstan.neon app/
+  - echo ">>> static debugging finished.";echo " ============================================================ ";echo
+  - echo " ============================================================ ";echo ">>> php unit-test start...";
   - vendor/bin/phpunit tests/
+  - echo ">>> php unit-test finished.";echo " ============================================================ ";echo
