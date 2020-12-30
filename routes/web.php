@@ -11,6 +11,9 @@
 |
 */
 
+use App\Http\Controllers\Auth\TestController;
+
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/test_blade_page', [TestController::class, 'show']);
